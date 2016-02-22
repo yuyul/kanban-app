@@ -4,5 +4,5 @@ import notes from './notes';
 
 export default combineReducers({
     lanes,
-    notes
+    notes,
 });
