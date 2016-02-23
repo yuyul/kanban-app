@@ -35,6 +35,8 @@ build:
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
 
+deploy:
+  steps:
     - wercker-labs/azure-ftp-deply:
       publis-url: ftp://waws-prod-bay-049.ftp.azurewebsites.windows.net/site/wwwroot
       username: $username
