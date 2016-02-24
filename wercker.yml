@@ -42,7 +42,7 @@ build:
 
     - script:
         name: copy to output
-        code: cp -avr build/ $WERCKER_OUTPUT_DIR/
+        code: cp -avr build/* $WERCKER_OUTPUT_DIR/
 
 deploy:
   steps:
