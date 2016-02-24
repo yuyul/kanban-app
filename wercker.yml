@@ -3,7 +3,7 @@
 # If you want Nodesource's container you would reference nodesource/node
 # Read more about containers on our dev center
 # http://devcenter.wercker.com/docs/containers/index.html
-box: wercker/nodejs
+box: wercker-labs/windows
 # This is the build pipeline. Pipelines are the core of wercker
 # Read more about pipelines on our dev center
 # http://devcenter.wercker.com/docs/pipelines/index.html
@@ -38,6 +38,6 @@ build:
 deploy:
   steps:
     - wercker-labs/azure-ftp-deply:
-      publis-url: ftp://waws-prod-bay-049.ftp.azurewebsites.windows.net/site/wwwroot
+      publis-url: ftp://waws-prod-cq1-005.ftp.azurewebsites.windows.net/site/wwwroot
       username: $username
       password: $password
