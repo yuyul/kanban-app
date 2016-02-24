@@ -40,9 +40,14 @@ build:
         code: |
           ls -l
 
+    - script:
+        name: copy to output
+        code: rsync -avz build/ $WERCKER_OUTPUT_DIR/
+
 deploy:
   steps:
     - wercker-labs/azure-ftp-deploy:
+
       publish-url: ftp://waws-prod-cq1-005.ftp.azurewebsites.windows.net/site/wwwroot
       username: 997cfd3b-0ee0-4-231-b9ee
       password: $password
