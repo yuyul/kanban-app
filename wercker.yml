@@ -38,11 +38,11 @@ build:
     - script:
         name: copy folder dist in wercker_output_dir
         code: |-
-            rsync -avz dist/ $WERCKER_OUTPUT_DIR/dist/
+            cp -avr dist/ $WERCKER_OUTPUT_DIR/dist/
 
     - script:
         name: copy index.html in wercker_output_dir
-        code: rsync -avz index.html $WERCKER_OUTPUT_DIR/
+        code: cp -avr index.html $WERCKER_OUTPUT_DIR/
 
 deploy:
   steps:
