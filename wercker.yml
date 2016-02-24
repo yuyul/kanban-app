@@ -35,11 +35,14 @@ build:
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
 
+    - script:
+        name: test
+        code: |
+          ls -l
 
 deploy:
   steps:
     - wercker-labs/azure-ftp-deploy:
-      cwd: dist/
       publish-url: ftp://waws-prod-cq1-005.ftp.azurewebsites.windows.net/site/wwwroot
       username: 997cfd3b-0ee0-4-231-b9ee
       password: $password
