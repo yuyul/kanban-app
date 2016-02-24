@@ -48,6 +48,6 @@ deploy:
   steps:
     - wercker-labs/azure-ftp-deploy:
 
-      publish-url: ftp://waws-prod-cq1-005.ftp.azurewebsites.windows.net/site/wwwroot
-      username: 997cfd3b-0ee0-4-231-b9ee
+      publish-url: ftp://waws-prod-am2-057.ftp.azurewebsites.windows.net/site/wwwroot
+      username: 1f59dd85-0ee0-4-231-b9ee
       password: $password
