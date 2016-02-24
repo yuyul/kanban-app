@@ -35,18 +35,11 @@ build:
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
 
-    - script:
-        name: copy folder dist in wercker_output_dir
-        code: |-
-            cp -avr dist/ $WERCKER_OUTPUT_DIR/dist/
-
-    - script:
-        name: copy index.html in wercker_output_dir
-        code: cp -avr index.html $WERCKER_OUTPUT_DIR/
 
 deploy:
   steps:
     - wercker-labs/azure-ftp-deploy:
+      cwd: dist/
       publish-url: ftp://waws-prod-cq1-005.ftp.azurewebsites.windows.net/site/wwwroot
       username: 997cfd3b-0ee0-4-231-b9ee
       password: $password
